@@ -1,0 +1,33 @@
+﻿@using Sprout.DTO;
+@model List<EmployeeDto>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employees</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Address 1</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.FirstName</td>
+                <td>@emp.LastName</td>
+                <td>@emp.PhoneNumber</td>
+                <td>@emp.Address1</td>
+                <td>@emp.City</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
